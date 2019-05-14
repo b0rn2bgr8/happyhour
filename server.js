@@ -3,6 +3,7 @@ const express = require('express'),
     bodyParser = require('body-parser');
 const config = require('./config/config');
 
+
 var app = express();
 
 mongoose.connect(config.database, (err) => {
@@ -16,5 +17,6 @@ mongoose.connect(config.database, (err) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
+require('./routes/user')(app);
 
 app.listen(config.port, () => { console.log("api server listening on port " + config.port) });
