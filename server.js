@@ -19,4 +19,4 @@ app.use(bodyParser.urlencoded());
 
 require('./routes/user')(app);
 
-app.listen(config.port, () => { console.log("api server listening on port " + config.port) });
+app.listen(config.port, () => { console.log("api server listening on port " + config.port + " " + process.env.NODE_ENV) });
