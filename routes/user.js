@@ -1,6 +1,6 @@
 var User = require('../models/user');
 
-module.exports = app => () => {
+module.exports = app => {
     app.get('/', (req, res) => {
         res.json({
             message: "Welcome To My World"
