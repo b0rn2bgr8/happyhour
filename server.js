@@ -6,7 +6,7 @@ const config = require('./config/config');
 
 var app = express();
 
-mongoose.connect(config.database, (err) => {
+mongoose.connect(config.database, {useNewUrlParser: true}, (err) => {
     if (err) {
         console.log(err.message)
     } else {
