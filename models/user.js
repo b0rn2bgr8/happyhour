@@ -7,7 +7,7 @@ const userSchema = new Schema({
     dateofbirth: { type: Date, default: '' },
     greetings: { type: String}
 }, {
-        timestamps: { createdAt }
+        timestamps: { createdAt: 'createdAt' }
     });
 
 module.exports = mongoose.model('user', userSchema);
